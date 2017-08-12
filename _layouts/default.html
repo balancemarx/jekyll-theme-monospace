@@ -1,1 +1,24 @@
-{{ content }}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ "/assets/styles.css" | relative_url }}">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+  </head>
+  <body>
+    <div id="wrap" style="width:850px">
+      <div id="container" style="width:560px">
+        <div class="entry">
+          {{ content }}
+        </div>
+        <div id="sidebar">
+          <h1><a href="{{ "/" | relative_url }}">{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</a></h1>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
