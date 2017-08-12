@@ -10,14 +10,25 @@
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
   </head>
   <body>
-    <div id="wrap" style="width:850px">
-      <div id="container" style="width:560px">
+    <div class="flexbox">
+      <div class="left">
+        <h1><a href="{{ "/" | relative_url }}">{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</a></h1>
+      </div>
+      <div class="right">
         <div class="entry">
           {{ content }}
         </div>
-        <div id="sidebar">
-          <h1><a href="{{ "/" | relative_url }}">{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</a></h1>
-        </div>
+      </div>
+    </div>
+    <div id="footer">
+      <nav>
+        <ul>
+          <li><a href="{{ "/" | relative_url }}">Home</a></li>
+          <li><a href="{{ "/feed.xml" | relative_url }}">RSS</a></li>
+        </ul>
+      </nav>
+      <div id="credits">
+        <span></span>
       </div>
     </div>
   </body>

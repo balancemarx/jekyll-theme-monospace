@@ -10,9 +10,7 @@
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
  */
 
-.highlight code,.highlight pre{color:#fdce93;background-color:#3f3f3f;padding:10px;}.highlight .hll{background-color:#222}.highlight .c{color:#7f9f7f}.highlight .err{color:#e37170;background-color:#3d3535}.highlight .g{color:#7f9f7f}.highlight .k{color:#f0dfaf}.highlight .l{color:#ccc}.highlight .n{color:#dcdccc}.highlight .o{color:#f0efd0}.highlight .x{color:#ccc}.highlight .p{color:#41706f}.highlight .cm{color:#7f9f7f}.highlight .cp{color:#7f9f7f}.highlight .c1{color:#7f9f7f}.highlight .cs{color:#cd0000;font-weight:bold}.highlight .gd{color:#cd0000}.highlight .ge{color:#ccc;font-style:italic}.highlight .gr{color:red}.highlight .gh{color:#dcdccc;font-weight:bold}.highlight .gi{color:#00cd00}.highlight .go{color:gray}.highlight .gp{color:#dcdccc;font-weight:bold}.highlight .gs{color:#ccc;font-weight:bold}.highlight .gu{color:purple;font-weight:bold}.highlight .gt{color:#0040D0}.highlight .kc{color:#dca3a3}.highlight .kd{color:#ffff86}.highlight .kn{color:#dfaf8f;font-weight:bold}.highlight .kp{color:#cdcf99}.highlight .kr{color:#cdcd00}.highlight .kt{color:#00cd00}.highlight .ld{color:#cc9393}.highlight .m{color:#8cd0d3}.highlight .s{color:#cc9393}.highlight .na{color:#9ac39f}.highlight .nb{color:#efef8f}.highlight .nc{color:#efef8f}.highlight .no{color:#ccc}.highlight .nd{color:#ccc}.highlight .ni{color:#c28182}.highlight .ne{color:#c3bf9f;font-weight:bold}.highlight .nf{color:#efef8f}.highlight .nl{color:#ccc}.highlight .nn{color:#8fbede}.highlight .nx{color:#ccc}.highlight .py{color:#ccc}.highlight .nt{color:#9ac39f}.highlight .nv{color:#dcdccc}.highlight .ow{color:#f0efd0}.highlight .w{color:#ccc}.highlight .mf{color:#8cd0d3}.highlight .mh{color:#8cd0d3}.highlight .mi{color:#8cd0d3}.highlight .mo{color:#8cd0d3}.highlight .sb{color:#cc9393}.highlight .sc{color:#cc9393}.highlight .sd{color:#cc9393}.highlight .s2{color:#cc9393}.highlight .se{color:#cc9393}.highlight .sh{color:#cc9393}.highlight .si{color:#cc9393}.highlight .sx{color:#cc9393}.highlight .sr{color:#cc9393}.highlight .s1{color:#cc9393}.highlight .ss{color:#cc9393}.highlight .bp{color:#efef8f}.highlight .vc{color:#efef8f}.highlight .vg{color:#dcdccc}.highlight .vi{color:#ffffc7}.highlight .il{color:#8cd0d3}
-
-body { margin:0px; padding:20px 0px; text-align:center; font-family:Monospace; color:#585858; }
+body { margin:0px; padding:20px 20px; text-align:center; font-family:Monospace; color:#585858; }
 a, a:visited { text-decoration:none; color:rgb(17, 170, 34); }
 a:hover { color:#FFF; background-color:#5353CB }
 h1, h2, h3, h4, h5, h6, h7 { margin:0px; text-transform:uppercase; }
@@ -22,6 +20,35 @@ blockquote { font-style:italic; background:#EAEAEA; margin:20px; padding:5px 10p
 blockquote cite { display:block; padding:10px 20px 0 0; text-align:right; }
 input, textarea { padding:5px; border:1px solid #8A8A8A; background:#EAEAEA; }
 input:hover, textarea:hover, blockquote:hover { background:#E5E5E5; }
+
+.flexbox {
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: flex;
+  width: 100%;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.left {
+  min-width: 200px;
+  flex-grow: 0;
+  padding: 0px 15px 0px 0px;
+  border-right: 1px dotted #C8C8C8;
+  text-align: right;
+}
+
+.left li { list-style-type:none; }
+.left > li { margin: 20px 0px; }
+.left h1 { border-bottom:1px dotted #C8C8C8; }
+.left .description { display:block; width:100%; height:auto; margin:0px 0px 10px 0px; }
+
+.right {
+  text-align: left;
+  flex-grow: 1;
+  padding-left: 15px;
+  padding-top: 8px;
+}
 
 #wrap { margin:0px auto; text-align:left; font-size: 13px; line-height: 1.4; }
 #container { float:right; }
@@ -95,8 +122,8 @@ ul.commentlist ul.children li { list-style-type:none; border:1px solid #AAA }
 input#submit { font-weight:bold; }
 input#s { width:70%; height:auto; margin:5px 0px; }
 
-#footer { text-align:center; clear:both; }
-#footer div { margin:30px 0px 0px 0px; padding:30px 0px 0px 0px; border-top:1px dotted #C8C8C8; }
+#footer { text-align:center; clear:both; border-top:1px dotted #C8C8C8; }
+#footer div { margin:30px 0px 0px 0px; padding:30px 0px 0px 0px;  }
 #footer li { list-style-type:none; }
 #footer .widget_tag_cloud h2 { display:none; }
 
@@ -105,3 +132,74 @@ input#s { width:70%; height:auto; margin:5px 0px; }
     position : relative;
     top : 8px;
 }
+
+.highlight code, .highlight pre {color:#fdce93;background-color:#3f3f3f;padding:10px;}
+.highlight .hll{background-color:#222}
+.highlight .c{color:#7f9f7f}
+.highlight .err{color:#e37170;background-color:#3d3535}
+.highlight .g{color:#7f9f7f}
+.highlight .k{color:#f0dfaf}
+.highlight .l{color:#ccc}
+.highlight .n{color:#dcdccc}
+.highlight .o{color:#f0efd0}
+.highlight .x{color:#ccc}
+.highlight .p{color:#41706f}
+.highlight .cm{color:#7f9f7f}
+.highlight .cp{color:#7f9f7f}
+.highlight .c1{color:#7f9f7f}
+.highlight .cs{color:#cd0000;font-weight:bold}
+.highlight .gd{color:#cd0000}
+.highlight .ge{color:#ccc;font-style:italic}
+.highlight .gr{color:red}
+.highlight .gh{color:#dcdccc;font-weight:bold}
+.highlight .gi{color:#00cd00}
+.highlight .go{color:gray}
+.highlight .gp{color:#dcdccc;font-weight:bold}
+.highlight .gs{color:#ccc;font-weight:bold}
+.highlight .gu{color:purple;font-weight:bold}
+.highlight .gt{color:#0040D0}
+.highlight .kc{color:#dca3a3}
+.highlight .kd{color:#ffff86}
+.highlight .kn{color:#dfaf8f;font-weight:bold}
+.highlight .kp{color:#cdcf99}
+.highlight .kr{color:#cdcd00}
+.highlight .kt{color:#00cd00}
+.highlight .ld{color:#cc9393}
+.highlight .m{color:#8cd0d3}
+.highlight .s{color:#cc9393}
+.highlight .na{color:#9ac39f}
+.highlight .nb{color:#efef8f}
+.highlight .nc{color:#efef8f}
+.highlight .no{color:#ccc}
+.highlight .nd{color:#ccc}
+.highlight .ni{color:#c28182}
+.highlight .ne{color:#c3bf9f;font-weight:bold}
+.highlight .nf{color:#efef8f}
+.highlight .nl{color:#ccc}
+.highlight .nn{color:#8fbede}
+.highlight .nx{color:#ccc}
+.highlight .py{color:#ccc}
+.highlight .nt{color:#9ac39f}
+.highlight .nv{color:#dcdccc}
+.highlight .ow{color:#f0efd0}
+.highlight .w{color:#ccc}
+.highlight .mf{color:#8cd0d3}
+.highlight .mh{color:#8cd0d3}
+.highlight .mi{color:#8cd0d3}
+.highlight .mo{color:#8cd0d3}
+.highlight .sb{color:#cc9393}
+.highlight .sc{color:#cc9393}
+.highlight .sd{color:#cc9393}
+.highlight .s2{color:#cc9393}
+.highlight .se{color:#cc9393}
+.highlight .sh{color:#cc9393}
+.highlight .si{color:#cc9393}
+.highlight .sx{color:#cc9393}
+.highlight .sr{color:#cc9393}
+.highlight .s1{color:#cc9393}
+.highlight .ss{color:#cc9393}
+.highlight .bp{color:#efef8f}
+.highlight .vc{color:#efef8f}
+.highlight .vg{color:#dcdccc}
+.highlight .vi{color:#ffffc7}
+.highlight .il{color:#8cd0d3}
